@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Couro Norte Estofaria — Reforma de Sofás e Tapeçaria | Estreito, Florianópolis</title>
+  <meta name="description" content="Reforma de sofás, bancos automotivos e tapeçaria residencial no Estreito, Florianópolis. Acabamento de fábrica em tecido ou couro. Orçamento pelo WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: '#1c1410',
+            charcoal: '#262320',
+            slate: '#3d3834',
+            fog: '#eae7e2',
+            smoke: '#f5f3ef',
+            brass: '#c4a035',
+            brasslight: '#e0c56a'
+          },
+          fontFamily: {
+            display: ['Syne', 'system-ui', 'sans-serif'],
+            sans: ['Outfit', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(196,160,53,.28)',
+            deep: '0 24px 48px rgba(28,20,16,.18)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Outfit, system-ui, sans-serif; }
+    .font-display { font-family: Syne, system-ui, sans-serif; }
+    .glass {
+      background: rgba(28, 20, 16, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .hero-bg {
+      background:
+        linear-gradient(115deg, rgba(28,20,16,.92) 0%, rgba(38,35,32,.58) 48%, rgba(28,20,16,.88) 100%),
+        url('images/hero.jpg') center/cover no-repeat;
+    }
+    .mesh {
+      background:
+        radial-gradient(ellipse 70% 55% at 8% 15%, rgba(196,160,53,.12), transparent 50%),
+        radial-gradient(ellipse 55% 45% at 92% 8%, rgba(38,35,32,.08), transparent 45%),
+        linear-gradient(180deg, #f5f3ef 0%, #eae7e2 50%, #f5f3ef 100%);
+    }
+    .service-card {
+      transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, border-color .35s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(28,20,16,.14);
+      border-color: rgba(196,160,53,.5);
+    }
+    .gallery-item img {
+      transition: transform .7s cubic-bezier(.22,1,.36,1);
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .float-wa {
+      animation: bob 3.2s ease-in-out infinite;
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1);
+    }
+    .reveal.in { opacity: 1; transform: none; }
+    .pulse-dot {
+      box-shadow: 0 0 0 0 rgba(196,160,53,.5);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 10px rgba(196,160,53,0); }
+      100% { box-shadow: 0 0 0 0 rgba(196,160,53,0); }
+    }
+    #lightbox { opacity: 0; pointer-events: none; transition: opacity .25s ease; }
+    #lightbox.open { opacity: 1; pointer-events: auto; }
+    .estimator-option.selected {
+      border-color: #c4a035;
+      background: rgba(196,160,53,.12);
+      box-shadow: 0 0 0 1px #c4a035;
+    }
+    .brass-gradient {
+      background: linear-gradient(135deg, #c4a035 0%, #e0c56a 45%, #9a7b28 100%);
+    }
+  </style>
+</head>
+<body class="bg-smoke text-espresso antialiased">
+
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="glass border-b border-white/10">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 h-[4.25rem] flex items-center justify-between gap-3">
+        <a href="#topo" class="font-display font-extrabold text-base sm:text-lg tracking-tight text-white leading-tight">
+          Couro<span class="text-brasslight"> Norte</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm text-white/80">
+          <a href="#servicos" class="hover:text-brasslight transition">Serviços</a>
+          <a href="#galeria" class="hover:text-brasslight transition">Galeria</a>
+          <a href="#confianca" class="hover:text-brasslight transition">Por que nós</a>
+          <a href="#orcamento" class="hover:text-brasslight transition">Orçamento</a>
+          <a href="#contato" class="hover:text-brasslight transition">Contato</a>
+        </nav>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+          <span class="hidden sm:inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-3 py-1.5 text-[11px] font-semibold text-white/95">
+            <span class="h-2 w-2 rounded-full bg-brass pulse-dot"></span>
+            Agenda Aberta para Esta Semana
+          </span>
+          <a href="https://wa.me/5548999407712?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20na%20Couro%20Norte%20Estofaria"
+             target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center rounded-full brass-gradient px-3.5 sm:px-4 py-2 text-xs sm:text-sm font-bold text-espresso hover:brightness-110 transition shadow-glow">
+            Chamar no WhatsApp
+          </a>
+          <button id="menuBtn" class="md:hidden text-white p-2" aria-label="Abrir menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 px-4 pb-4">
+        <div class="flex flex-col gap-3 pt-3 text-sm text-white/85">
+          <a href="#servicos" class="py-1">Serviços</a>
+          <a href="#galeria" class="py-1">Galeria</a>
+          <a href="#confianca" class="py-1">Por que nós</a>
+          <a href="#orcamento" class="py-1">Orçamento</a>
+          <a href="#contato" class="py-1">Contato</a>
+          <span class="inline-flex items-center gap-2 text-[11px] font-semibold text-brasslight pt-1">
+            <span class="h-2 w-2 rounded-full bg-brass"></span> Agenda Aberta para Esta Semana
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="topo">
+    <section class="hero-bg relative min-h-[100svh] flex items-end sm:items-center">
+      <div class="absolute inset-0 bg-gradient-to-t from-espresso via-transparent to-espresso/35"></div>
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 w-full pt-28 pb-16 sm:py-32">
+        <p class="font-display text-brasslight text-sm sm:text-base font-bold tracking-[0.2em] uppercase mb-4 reveal">Estofaria · Estreito</p>
+        <h1 class="font-display text-white font-extrabold text-[clamp(2.4rem,7.5vw,4.75rem)] leading-[0.98] tracking-tight max-w-[14ch] mb-5 reveal" style="transition-delay:.08s">
+          Seu sofá renovado com acabamento de fábrica
+        </h1>
+        <p class="text-white/78 text-base sm:text-lg max-w-lg mb-8 reveal" style="transition-delay:.16s">
+          Reforma de sofás, bancos automotivos e tapeçaria residencial em Florianópolis — costura precisa, espuma nova e tecidos ou couro selecionados na oficina.
+        </p>
+        <div class="flex flex-wrap gap-3 reveal" style="transition-delay:.24s">
+          <a href="https://wa.me/5548999407712?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20visita%20para%20reforma%20de%20sof%C3%A1"
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 rounded-full brass-gradient px-6 py-3.5 text-sm font-bold text-espresso hover:brightness-110 transition shadow-glow">
+            Pedir orçamento
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="#orcamento"
+             class="inline-flex items-center rounded-full border border-white/35 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/12 transition">
+            Simular valor agora
+          </a>
+        </div>
+        <p class="mt-10 text-white/50 text-xs sm:text-sm reveal" style="transition-delay:.32s">Rua Santos Saraiva, 1850 — Estreito · Retirada e entrega na região metropolitana</p>
+      </div>
+    </section>
+
+    <section id="servicos" class="mesh py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="max-w-xl mb-12 reveal">
+          <p class="text-brass font-bold text-sm tracking-widest uppercase mb-2">Serviços</p>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-espresso">Tapeçaria completa, do estofado ao automotivo</h2>
+          <p class="mt-3 text-slate/80">Cada peça passa por desmontagem, troca de espuma quando necessário, costura industrial e acabamento capitonê ou reto — no padrão que você escolher.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="service-card reveal rounded-2xl border border-charcoal/10 bg-white/85 p-6 sm:p-7">
+            <div class="mb-5 h-12 w-12 rounded-xl bg-espresso text-brasslight flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19V5a2 2 0 012-2h12a2 2 0 012 2v14M4 19h16M8 11h8M8 15h5"/></svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Reforma de sofás</h3>
+            <p class="text-slate/70 text-sm leading-relaxed">2 e 3 lugares, chaise, canto e retrátil. Tecidos impermeáveis, suede, linho ou couro sintético com garantia de costura.</p>
+          </article>
+
+          <article class="service-card reveal rounded-2xl border border-charcoal/10 bg-white/85 p-6 sm:p-7" style="transition-delay:.08s">
+            <div class="mb-5 h-12 w-12 rounded-xl bg-espresso text-brasslight flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4v11m9 0h4l3-3V7a1 1 0 00-1-1h-3"/></svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Bancos automotivos</h3>
+            <p class="text-slate/70 text-sm leading-relaxed">Revestimento de bancos dianteiros e traseiros, costura reforçada nas áreas de atrito e opções em couro legítimo ou sintético.</p>
+          </article>
+
+          <article class="service-card reveal rounded-2xl border border-charcoal/10 bg-white/85 p-6 sm:p-7" style="transition-delay:.16s">
+            <div class="mb-5 h-12 w-12 rounded-xl bg-espresso text-brasslight flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Tapeçaria residencial</h3>
+            <p class="text-slate/70 text-sm leading-relaxed">Poltronas, cadeiras de jantar, cabeceiras e puff. Restauração de estrutura em madeira quando o móvel pede reforço.</p>
+          </article>
+
+          <article class="service-card reveal rounded-2xl border border-charcoal/10 bg-white/85 p-6 sm:p-7" style="transition-delay:.08s">
+            <div class="mb-5 h-12 w-12 rounded-xl bg-espresso text-brasslight flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Mostruário de tecidos</h3>
+            <p class="text-slate/70 text-sm leading-relaxed">Amostras físicas na oficina para combinar cor com sua sala. Orientação sobre durabilidade e limpeza de cada material.</p>
+          </article>
+
+          <article class="service-card reveal rounded-2xl border border-charcoal/10 bg-white/85 p-6 sm:p-7" style="transition-delay:.16s">
+            <div class="mb-5 h-12 w-12 rounded-xl bg-espresso text-brasslight flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Troca de espuma</h3>
+            <p class="text-slate/70 text-sm leading-relaxed">Densidade correta para assento e encosto — fim do “afundamento” e da deformação nas bordas após anos de uso.</p>
+          </article>
+
+          <article class="service-card reveal rounded-2xl border border-charcoal/10 bg-white/85 p-6 sm:p-7" style="transition-delay:.24s">
+            <div class="mb-5 h-12 w-12 rounded-xl bg-espresso text-brasslight flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Retirada e entrega</h3>
+            <p class="text-slate/70 text-sm leading-relaxed">Logística na Grande Florianópolis com agendamento. Você acompanha o status pelo WhatsApp enquanto o móvel está na oficina.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="bg-espresso py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 reveal">
+          <div>
+            <p class="text-brasslight font-bold text-sm tracking-widest uppercase mb-2">Galeria</p>
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Textura, couro e costura de precisão</h2>
+          </div>
+          <p class="text-white/50 text-sm max-w-xs">Clique para ampliar. Referências do acabamento que entregamos na Couro Norte.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+          <button type="button" class="gallery-item reveal group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-square md:row-span-2 md:aspect-auto md:h-full" data-full="images/galeria-1.jpg">
+            <img src="images/galeria-1.jpg" alt="Detalhe de estofado capitonê em sofá Chesterfield" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <span class="absolute inset-0 bg-gradient-to-t from-espresso/75 via-transparent to-transparent opacity-90"></span>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold">Capitonê premium</span>
+          </button>
+          <button type="button" class="gallery-item reveal group relative overflow-hidden rounded-2xl aspect-square" style="transition-delay:.06s" data-full="images/galeria-2.jpg">
+            <img src="images/galeria-2.jpg" alt="Textura de couro marrom em estofado" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <span class="absolute inset-0 bg-gradient-to-t from-espresso/65 to-transparent"></span>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold">Couro natural</span>
+          </button>
+          <button type="button" class="gallery-item reveal group relative overflow-hidden rounded-2xl aspect-square" style="transition-delay:.12s" data-full="images/galeria-3.jpg">
+            <img src="images/galeria-3.jpg" alt="Close de tecido acolchoado cinza" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <span class="absolute inset-0 bg-gradient-to-t from-espresso/65 to-transparent"></span>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold">Tecido acolchoado</span>
+          </button>
+          <button type="button" class="gallery-item reveal group relative overflow-hidden rounded-2xl aspect-square" style="transition-delay:.06s" data-full="images/galeria-4.jpg">
+            <img src="images/galeria-4.jpg" alt="Máquina de costura industrial em oficina de tapeçaria" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <span class="absolute inset-0 bg-gradient-to-t from-espresso/65 to-transparent"></span>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold">Costura industrial</span>
+          </button>
+          <button type="button" class="gallery-item reveal group relative overflow-hidden rounded-2xl aspect-square" style="transition-delay:.12s" data-full="images/galeria-5.jpg">
+            <img src="images/galeria-5.jpg" alt="Reforma de interior automotivo em oficina" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <span class="absolute inset-0 bg-gradient-to-t from-espresso/65 to-transparent"></span>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold">Linha automotiva</span>
+          </button>
+          <button type="button" class="gallery-item reveal group relative overflow-hidden rounded-2xl aspect-[16/10] md:col-span-2" style="transition-delay:.18s" data-full="images/hero.jpg">
+            <img src="images/hero.jpg" alt="Sala com sofá reformado e ambiente contemporâneo" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <span class="absolute inset-0 bg-gradient-to-t from-espresso/70 to-transparent"></span>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold">Resultado na sua casa</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="confianca" class="py-20 sm:py-28 bg-smoke">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="reveal">
+            <p class="text-brass font-bold text-sm tracking-widest uppercase mb-2">Por que a Couro Norte</p>
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight mb-5 text-espresso">Oficina no Estreito, padrão que você vê e sente</h2>
+            <p class="text-slate/80 mb-8 max-w-md">Não é só trocar o tecido: alinhamos estrutura, espuma e acabamento para o móvel voltar confortável — e com cara de novo — por muito mais tempo.</p>
+            <div class="space-y-5">
+              <div class="flex gap-4">
+                <div class="mt-1 h-10 w-10 shrink-0 rounded-full bg-fog flex items-center justify-center text-brass font-display font-bold">01</div>
+                <div>
+                  <h3 class="font-bold text-espresso">Processo transparente</h3>
+                  <p class="text-sm text-slate/70 mt-1">Orçamento itemizado antes de retirar o móvel. Você sabe prazo e material antes de autorizar.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="mt-1 h-10 w-10 shrink-0 rounded-full bg-fog flex items-center justify-center text-brass font-display font-bold">02</div>
+                <div>
+                  <h3 class="font-bold text-espresso">Máquinas e mão de obra especializada</h3>
+                  <p class="text-sm text-slate/70 mt-1">Costura reta, overlock e reforços nas zonas de pressão — o mesmo cuidado em residencial e automotivo.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="mt-1 h-10 w-10 shrink-0 rounded-full bg-fog flex items-center justify-center text-brass font-display font-bold">03</div>
+                <div>
+                  <h3 class="font-bold text-espresso">Raiz em Florianópolis</h3>
+                  <p class="text-sm text-slate/70 mt-1">Ateliê na Rua Santos Saraiva, no Estreito — fácil de visitar e escolher tecido pessoalmente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal relative" style="transition-delay:.12s">
+            <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brass/25 via-transparent to-charcoal/30 blur-2xl"></div>
+            <img src="images/trust.jpg"
+                 alt="Artesão costurando tecido em máquina na oficina"
+                 class="relative rounded-[1.5rem] w-full h-[420px] object-cover shadow-deep" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="orcamento" class="py-20 sm:py-28 bg-charcoal text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-40 pointer-events-none"
+           style="background: radial-gradient(circle at 75% 15%, rgba(196,160,53,.4), transparent 42%), radial-gradient(circle at 15% 85%, rgba(28,20,16,.6), transparent 40%);"></div>
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="max-w-xl mb-10 reveal">
+          <p class="text-brasslight font-bold text-sm tracking-widest uppercase mb-2">Estimativa rápida</p>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight">Quanto custa a sua reforma?</h2>
+          <p class="mt-3 text-white/60">Escolha o tipo de móvel e o revestimento. Em segundos você vê uma faixa de valor e envia para confirmar no WhatsApp.</p>
+        </div>
+
+        <div class="reveal grid lg:grid-cols-[1.2fr_.8fr] gap-6 lg:gap-8">
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 backdrop-blur-sm">
+            <p class="text-sm font-semibold text-white/80 mb-3">Tipo de serviço</p>
+            <div class="grid sm:grid-cols-2 gap-3 mb-8" id="tipoGroup">
+              <button type="button" data-tipo="Sofá 2 lugares" data-base="890" class="estimator-option selected rounded-xl border border-white/15 px-4 py-3 text-left text-sm font-semibold hover:border-brass/50 transition">
+                Sofá 2 lugares
+              </button>
+              <button type="button" data-tipo="Sofá 3 lugares" data-base="1280" class="estimator-option rounded-xl border border-white/15 px-4 py-3 text-left text-sm font-semibold hover:border-brass/50 transition">
+                Sofá 3 lugares
+              </button>
+              <button type="button" data-tipo="Automotivo (par dianteiro)" data-base="1450" class="estimator-option rounded-xl border border-white/15 px-4 py-3 text-left text-sm font-semibold hover:border-brass/50 transition">
+                Automotivo
+              </button>
+              <button type="button" data-tipo="Cadeira / poltrona" data-base="420" class="estimator-option rounded-xl border border-white/15 px-4 py-3 text-left text-sm font-semibold hover:border-brass/50 transition">
+                Cadeira / poltrona
+              </button>
+            </div>
+
+            <p class="text-sm font-semibold text-white/80 mb-3">Revestimento</p>
+            <div class="grid sm:grid-cols-2 gap-3 mb-8" id="matGroup">
+              <button type="button" data-mat="tecido" data-mult="1" class="estimator-option selected rounded-xl border border-white/15 px-4 py-3 text-left text-sm font-semibold hover:border-brass/50 transition">
+                Tecido
+              </button>
+              <button type="button" data-mat="couro" data-mult="1.45" class="estimator-option rounded-xl border border-white/15 px-4 py-3 text-left text-sm font-semibold hover:border-brass/50 transition">
+                Couro
+              </button>
+            </div>
+
+            <label class="flex items-center gap-3 text-sm text-white/75 cursor-pointer select-none">
+              <input id="espumaCheck" type="checkbox" class="h-4 w-4 rounded accent-brass" />
+              Incluir troca de espuma (+ 18%)
+            </label>
+          </div>
+
+          <div class="rounded-3xl brass-gradient text-espresso p-6 sm:p-8 flex flex-col justify-between shadow-glow">
+            <div>
+              <p class="text-sm font-semibold opacity-75 mb-1">Estimativa a partir de</p>
+              <p id="precoEstimado" class="font-display text-5xl font-extrabold tracking-tight">R$ 890</p>
+              <p class="mt-3 text-sm opacity-80 leading-relaxed">Valores indicativos para a região de Florianópolis. O valor final depende de medidas, modelo e estado da estrutura — confirmamos na visita ou pelo envio de fotos.</p>
+            </div>
+            <a id="waOrcamento"
+               href="https://wa.me/5548999407712?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Couro%20Norte%20e%20quero%20um%20or%C3%A7amento"
+               target="_blank" rel="noopener"
+               class="mt-8 inline-flex items-center justify-center rounded-full bg-espresso px-6 py-3.5 text-sm font-bold text-white hover:bg-espresso/90 transition">
+              Confirmar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="py-20 sm:py-28 mesh">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-10">
+          <div class="reveal">
+            <p class="text-brass font-bold text-sm tracking-widest uppercase mb-2">Contato</p>
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 text-espresso">Traga seu projeto para a oficina</h2>
+            <p class="text-slate/80 max-w-md mb-8">Mande fotos do móvel pelo WhatsApp — respondemos com orientação e janela para retirada ou visita ao ateliê no Estreito.</p>
+            <a href="https://wa.me/5548999407712" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-display text-2xl font-bold text-espresso hover:text-brass transition">
+              (48) 99940-7712
+            </a>
+          </div>
+
+          <div class="reveal rounded-3xl border border-charcoal/10 bg-white/90 p-6 sm:p-8 shadow-deep" style="transition-delay:.1s">
+            <dl class="space-y-5 text-sm">
+              <div>
+                <dt class="font-semibold text-slate/55 uppercase tracking-wider text-[11px] mb-1">Endereço</dt>
+                <dd class="text-espresso font-medium">Rua Santos Saraiva, 1850 — Estreito<br />Florianópolis — SC, 88070-100</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate/55 uppercase tracking-wider text-[11px] mb-1">Horário</dt>
+                <dd class="text-espresso font-medium">Seg–Sex: 08:30 – 18:00<br />Sáb: 09:00 – 13:00</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate/55 uppercase tracking-wider text-[11px] mb-1">WhatsApp</dt>
+                <dd>
+                  <a href="https://wa.me/5548999407712" target="_blank" rel="noopener" class="text-brass font-bold hover:underline">wa.me/5548999407712</a>
+                </dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate/55 uppercase tracking-wider text-[11px] mb-1">Especialidades</dt>
+                <dd class="text-espresso font-medium">Sofás · Automotivo · Tapeçaria residencial · Estreito e região</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-espresso text-white/50 py-10">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-sm">
+      <p class="font-display font-bold text-white">Couro<span class="text-brasslight"> Norte</span> <span class="font-sans font-normal text-white/40 ml-2">Estofaria</span></p>
+      <p>© <span id="year"></span> Couro Norte Estofaria · Florianópolis/SC · Demo para pitch comercial</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5548999407712?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20Couro%20Norte%20Estofaria"
+     target="_blank" rel="noopener"
+     class="float-wa fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl hover:scale-105 transition"
+     aria-label="WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <div id="lightbox" class="fixed inset-0 z-[60] bg-espresso/92 flex items-center justify-center p-4" role="dialog" aria-modal="true">
+    <button id="lightboxClose" class="absolute top-4 right-4 text-white/80 hover:text-white text-3xl leading-none" aria-label="Fechar">&times;</button>
+    <img id="lightboxImg" src="" alt="Ampliação da galeria" class="max-h-[88vh] max-w-full rounded-xl object-contain shadow-2xl" />
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.hero-bg .reveal').forEach(el => el.classList.add('in'));
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('.gallery-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        lightboxImg.src = btn.dataset.full;
+        lightbox.classList.add('open');
+      });
+    });
+    document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
+
+    let base = 890, mult = 1;
+    const precoEl = document.getElementById('precoEstimado');
+    const waOrc = document.getElementById('waOrcamento');
+    const espumaCheck = document.getElementById('espumaCheck');
+
+    function formatBRL(n) {
+      return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+    }
+
+    function updateEstimate() {
+      let total = Math.round(base * mult);
+      if (espumaCheck.checked) total = Math.round(total * 1.18);
+      precoEl.textContent = formatBRL(total);
+      const tipo = document.querySelector('#tipoGroup .selected')?.dataset.tipo || 'Sofá 2 lugares';
+      const mat = document.querySelector('#matGroup .selected')?.dataset.mat || 'tecido';
+      const msg = encodeURIComponent(
+        `Olá, vim pelo site da Couro Norte. Quero orçamento: ${tipo}, revestimento ${mat}, espuma nova ${espumaCheck.checked ? 'sim' : 'não'}. Estimativa do site: ${formatBRL(total)}.`
+      );
+      waOrc.href = `https://wa.me/5548999407712?text=${msg}`;
+    }
+
+    function bindGroup(groupId, onPick) {
+      const group = document.getElementById(groupId);
+      group.querySelectorAll('.estimator-option').forEach(btn => {
+        btn.addEventListener('click', () => {
+          group.querySelectorAll('.estimator-option').forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          onPick(btn);
+          updateEstimate();
+        });
+      });
+    }
+
+    bindGroup('tipoGroup', (btn) => { base = Number(btn.dataset.base); });
+    bindGroup('matGroup', (btn) => { mult = Number(btn.dataset.mult); });
+    espumaCheck.addEventListener('change', updateEstimate);
+    updateEstimate();
+  </script>
+</body>
+</html>
